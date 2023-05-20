@@ -21,15 +21,15 @@ body {
     padding-bottom: 30px;
 }
 
-.for-about {
-    max-width: 470px; /* Adjust the value as needed */
+.for-customer {
+    max-width: 500px; /* Adjust the value as needed */
     position: relative;
     margin: 0 20px;
     width: 100%;
     overflow: hidden;
 }
 
-.for-about img {
+.for-customer img {
     position: relative;
     top: 0;
     left: 0;
@@ -38,7 +38,7 @@ body {
     object-fit: contain;
 }
 
-.for-about-content {
+.for-customer-content {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -46,20 +46,25 @@ body {
     text-align: left;
 }
 
-.section-about {
-    text-align: center;
+.section-customer {
+    max-width: 800px;
+    /* margin: 0 auto; */
     margin-bottom: 30px;
-    margin-top: 50px;
-    max-width: 330px;
 }
 
-.section-about h2 {
+.section-customer h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.section-about p {
-    text-align: center;
-    font-size: 17px;
+.section-customer p {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.section-customer ul li {
+    text-align: left;
+    font-size: 16px;
     line-height: 1.5;
 }
