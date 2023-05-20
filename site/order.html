@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internet Store</title>
+  <link rel="stylesheet" href="./src/styles/header.css">
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="stylesheet" href="./src/styles/about.css">
+  <script>src="./src/scripts/sticky_header.js"</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap" rel="stylesheet">
+  <style>
+  .order-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: calc(40vh - 2em);
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  .order-details p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="header-grid">
+        <div>
+          <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <nav class="hidden-menu">
+            <ul>
+              <li><a href="index.html">Main Page</a></li>
+              <li><a href="for_customer.html">Information for Customers</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="center-logo flex-direction-column logo-font">
+          <a href="index.html" style="cursor: pointer; font-family: inherit; color: inherit; text-decoration: none;">
+            <div class="logo flex-direction-column">
+              <h3>Bavovna</h3>
+            </div>
+            <div class="slogan flex-direction-column">
+              <h3>Pure bond</h3>
+            </div>
+          </a>
+        </div>
+        <div class="btn-group">
+          <a href="order.html">
+          <img src="assets/shopping_cart.png" alt="Shopping Cart">
+          </a>
+        </div>
+      </nav>
+  </header>
+
+  <div class="order-details">
+    <h1 >Order Details</h1>
+  
+    <div class="order-details" id="order-details">
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Bavovna Store. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="./src/scripts/hamburger.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const orderDetailsContainer = document.getElementById('order-details');
+      const queryParams = new URLSearchParams(window.location.search);
+      console.log(queryParams);
+      if (queryParams.has('color') && queryParams.has('size') && queryParams.has('quantity') && queryParams.has('tel')) {
+        const color = queryParams.get('color');
+        const size = queryParams.get('size');
+        const quantity = queryParams.get('quantity');
+        const tel = queryParams.get('tel');
+  
+        const orderDetailsHTML = `
+          <p><strong>Color:</strong> ${color}</p>
+          <p><strong>Size:</strong> ${size}</p>
+          <p><strong>Quantity:</strong> ${quantity}</p>
+          <p><strong>Tel:</strong> ${tel}</p>
+          <p style="margin-top: 20px;">Our managers will contact you as soon as possible.</p>
+        `;
+  
+        orderDetailsContainer.innerHTML = orderDetailsHTML;
+      } else {
+        orderDetailsContainer.innerHTML = '<p>No order details to display</p>';
+      }
+    });
+  </script>
+</body>
+</html>

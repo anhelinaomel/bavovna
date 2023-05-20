@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internet Store</title>
+  <script>src="./src/scripts/sticky_header.js"</script>
+  <script src="./src/init/init.js"></script>
+  <link rel="stylesheet" href="./src/styles/header.css">
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="header-grid">
+      <div>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <nav class="hidden-menu">
+          <ul>
+            <li><a href="index.html">Main Page</a></li>
+            <li><a href="for_customer.html">Information for Customers</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="center-logo flex-direction-column logo-font">
+        <a href="index.html" style="cursor: pointer; font-family: inherit; color: inherit; text-decoration: none;">
+          <div class="logo flex-direction-column">
+            <h3>Bavovna</h3>
+          </div>
+          <div class="slogan flex-direction-column">
+            <h3>Pure bond</h3>
+          </div>
+        </a>
+      </div>
+      <div class="btn-group">
+        <a href="order.html">
+        <img src="assets/shopping_cart.png" alt="Shopping Cart">
+        </a>
+      </div>
+    </nav>
+
+  </header>
+  <marquee class="marquee-sale">MID SEASON SALE 70% OFF!</marquee>
+  <main>
+    <section>
+        <div class="product-list" id="product-container">
+          <!-- Product items will be dynamically added here by product_list_main.js -->
+        </div>
+    </section>
+    <div id="pagination-container">
+      <button id="prev-btn" disabled> < </button>
+      <button id="next-btn"> > </button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Products</h3>
+        <ul class="footer-list">
+          <li>Sweaters</li>
+          <li>Gloves</li>
+          <li>Hats</li>
+          <li>Scarves</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Email: omelchenko.anhelina@lll.kpi.ua</li>
+          <li>Phone: +380 (63) 773 23 43 </li>
+          <li><a href="#">Location</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>We are a leading retailer of wool and cotton sweaters, gloves, hats, and more. Our high-quality products are crafted with care to provide comfort and style.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Bavovna Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./src/scripts/hamburger.js"></script>
+  <script src="./src/scripts/product_list_main.js"></script>
+</body>
+</html>
